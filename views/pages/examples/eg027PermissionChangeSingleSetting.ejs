@@ -1,0 +1,51 @@
+<% include ../../partials/examplesHead %>
+
+<h4>27. Updating individual permission settings</h4>
+<p>
+  This code example demonstrates how to edit individual permission settings on a permissions profile with the eSignature REST API.
+</p>
+
+<% if (showDoc) { %>
+  <p><a target='_blank' href='<%= documentation %>'>Documentation</a> about this example.</p>
+<% } %>
+
+<p>
+    API method used:
+    <a target='_blank' href="https://developers.docusign.com/esign-rest-api/code-examples/permission-profile-updating">AccountPermissionProfiles::update</a>.
+</p>
+
+<p>The access-code to utilize the example provided is: <strong>NJ9@D1</strong></p>
+<% include ../../partials/gitSource %>
+
+<form class="eg" action="" method="post" data-busy="form">
+  <div class="form-group">
+
+    <label for="profiles">Permission profiles</label>
+      <ul>
+        <% profiles.forEach( profile => { %>
+          <li>
+            <a href = <%= "eg027?id=" + profile.permissionProfileId %>>  <%= profile.permissionProfileName %> </a>
+          </li>
+        <% }) %>
+      </ul>
+  <% if(selectedPermission === undefined) {%>
+    <p>Problem: please select profile from the above list. Thank you.</p>
+  <% } else { %>
+
+    <input type="checkbox" 
+    id = "allowApiAccess"
+    name = "allowApiAccess" <%= selectedPermission.settings.allowApiAccess === 'true' ? "checked" : "" %>
+    <label for="allowApiAccess"> Allow Api Access</label> <br />
+
+    <input type="checkbox" 
+    id = "allowApiAccessToAccount"
+    name = "allowApiAccessToAccount" <%= selectedPermission.settings.allowApiAccessToAccount === 'true' ? "checked" : "" %>
+    <label for="allowApiAccessToAccount"> Allow view and manage envelope rights through API</label> <br />
+
+  </div>
+  <input type="hidden" name="_csrf" value="<%- csrfToken %>">
+  <button type="submit" class="btn btn-primary">Submit</button>
+  <% }%>
+</form>
+
+<% include ../../partials/examplesFoot %>
