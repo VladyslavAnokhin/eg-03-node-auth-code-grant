@@ -79,6 +79,7 @@ exports.config = {
     , eg022: 'eg022KbaAuthentication.js'
     , eg023: 'eg023IdvAuthentication.js'
     , eg024: 'eg024CreateBrand.js'
+    , eg025: 'eg025ApplyBrandToEnvelope.js'
     , eg026: 'eg026ApplyBrandToTemplate.js'
     },
     java: {
