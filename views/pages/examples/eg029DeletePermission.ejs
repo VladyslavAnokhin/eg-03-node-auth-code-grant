@@ -19,13 +19,25 @@
 <p>The access-code to utilize the example provided is: <strong>NJ9@D1</strong></p>
 <% include ../../partials/gitSource %>
 
-  <form class="eg" action="" method="post" data-busy="form">
+<% if (profiles.length == 0) { %>
+<p>Problem: please first create the profile using <a href="eg028">example 28.</a> <br/> Thank you.</p>
+
+<form class="eg" action="eg028" method="get">
+    <button type="submit" class="btn btn-primary">Continue</button>
+</form>
+<% } else { %>
+<form class="eg" action="" method="post" data-busy="form">
     <div class="form-group">
-        <label for="profileName">Profile name</label>
-        <input type="profileName" class="form-control" id="profileName" name="profileName">
+        <label for="profiles">Permission profiles</label>
+        <select id="profileId" name="profileId" class="form-control">
+            <% profiles.forEach( profile => { %>
+            <option value="<%= profile.permissionProfileId %>" selected> <%= profile.permissionProfileName %> </option>
+            <% }) %>
+        </select>
     </div>
     <input type="hidden" name="_csrf" value="<%- csrfToken %>">
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-danger">Delete</button>
 </form>
+<% } %>
 
 <% include ../../partials/examplesFoot %>
