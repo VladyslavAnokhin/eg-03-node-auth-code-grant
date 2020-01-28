@@ -83,6 +83,7 @@ exports.config = {
     , eg026: 'eg026ApplyBrandToTemplate.js'
     , eg027: 'eg027PermissionChangeSingleSetting.js'
     , eg028: 'eg028CreatePermission.js'
+    , eg030: 'eg030PermissionSetUserGroup.js'
     },
     java: {
     eg001: 'EG001ControllerEmbeddedSigning.java'
