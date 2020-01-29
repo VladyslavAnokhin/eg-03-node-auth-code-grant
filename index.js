@@ -45,6 +45,7 @@ const express = require('express')
     , eg028 = require('./lib/examples/eg028CreatePermission')
     , eg029 = require('./lib/examples/eg029DeletePermission')
     , eg030 = require('./lib/examples/eg030PermissionSetUserGroup')
+    , eg031 = require('./lib/examples/eg031BulkSending')
     ;
 
 const PORT = process.env.PORT || 5000
@@ -152,6 +153,8 @@ let app = express()
   .post('/eg029', eg029.createController)
   .get('/eg030', eg030.getController)
   .post('/eg030', eg030.createController)
+  .get('/eg031', eg031.getController)
+  .post('/eg031', eg031.createController)
   ;
 
 function dsLoginCB1 (req, res, next) {req.dsAuthCodeGrant.oauth_callback1(req, res, next)}
