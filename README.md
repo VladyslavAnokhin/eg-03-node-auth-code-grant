@@ -87,7 +87,39 @@ The **refresh token** is not used in this example.
 1. **Requiring ID Verification (IDV) for a recipient**
    [Source.](./lib/examples/eg023IdvAuthentication.js)
    This example sends and envelope that requires the recipient to upload a government issued id.    
-
+1. **Creating a brand**
+   [Source.](./lib/examples/eg024CreateBrand.js)
+   This example creates brand profile for an account using the [Create Brand](https://developers.docusign.com/esign-rest-api/reference/Accounts/AccountBrands/create) method.
+1. **Applying a brand to an envelope**
+   [Source.](./lib/examples/eg025ApplyBrandToEnvelope.js)
+   This code example demonstrates how to apply a brand you've created to an envelope using the [Create Envelope](https://developers.docusign.com/esign-rest-api/reference/Envelopes/Envelopes/create) method. 
+   First, creates the envelope and then applies brand to it.
+   Anchor text ([AutoPlace](https://support.docusign.com/en/guides/AutoPlace-New-DocuSign-Experience)) is used to position the signing fields in the documents.
+1. **Applying a brand to a template**
+   [Source.](./lib/examples/eg026ApplyBrandToTemplate.js)
+   This code example demonstrates how to apply a brand you've created to a template using using the [Create Envelope](https://developers.docusign.com/esign-rest-api/reference/Envelopes/Envelopes/create) method. 
+   You must have at least one created template and brand.
+   Anchor text ([AutoPlace](https://support.docusign.com/en/guides/AutoPlace-New-DocuSign-Experience)) is used to position the signing fields in the documents.
+1. **Updating individual permission settings**
+   [Source.](./lib/examples/eg027PermissionChangeSingleSetting.js)
+   This code example demonstrates how to edit individual permission settings on a permissions profile using the [Update Permission Profile](https://developers.docusign.com/esign-rest-api/reference/Accounts/AccountPermissionProfiles/update) method.
+1. **Creating a permission profile**
+   [Source.](./lib/examples/eg028CreatePermission.js)
+   This code example demonstrates how to create a permission profile using the [Create Permission Profile](https://developers.docusign.com/esign-rest-api/reference/Accounts/AccountPermissionProfiles/create) method.
+1. **Deleting a permission profile**
+   [Source.](./lib/examples/eg029DeletePermission.js)
+   This code example demonstrates how to delete a permission profile using the [Delete Permission Profile](https://developers.docusign.com/esign-rest-api/reference/Accounts/AccountPermissionProfiles/create) method.
+1. **Setting a permission profile**
+   [Source.](./lib/examples/eg030PermissionSetUserGroup.js)
+   This code example demonstrates how to set a user group's permission profile using the [Update Group](https://developers.docusign.com/esign-rest-api/reference/UserGroups/Groups/update) method. 
+   You must have already created permissions profile and group of users.
+1. **Bulk sending envelopes to multiple recipients**
+   [Source.](./lib/examples/eg031BulkSendEnvelopes.js)
+   This code example demonstrates how to send envelopes in bulk to multiple recipients using these methods:
+   [Create Bulk Send List](https://developers.docusign.com/esign-rest-api/reference/BulkEnvelopes/BulkSend/createBulkSendList), 
+   [Create Bulk Send Request](https://developers.docusign.com/esign-rest-api/reference/BulkEnvelopes/BulkSend/createBulkSendRequest).
+   Firstly, creates a bulk send recipients list, and then creates an envelope. 
+   After that, initiates bulk envelope sending.
 
 ## Installation
 
