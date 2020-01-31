@@ -84,6 +84,7 @@ exports.config = {
     , eg027: 'eg027PermissionChangeSingleSetting.js'
     , eg028: 'eg028CreatePermission.js'
     , eg029: 'eg029DeletePermission.js'
+    , eg030: 'eg030PermissionSetUserGroup.js'
     },
     java: {
     eg001: 'EG001ControllerEmbeddedSigning.java'
